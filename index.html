@@ -41,7 +41,7 @@
     
       
       
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwZbk7I2KKvPENpP1dNNU8o6AcaLxayD1OsNmMtJYJhrAs-JM82v4S8M_LdCzqXC4WZSA/exec">
+    <!--<form method="POST" action="https://script.google.com/macros/s/AKfycbwZbk7I2KKvPENpP1dNNU8o6AcaLxayD1OsNmMtJYJhrAs-JM82v4S8M_LdCzqXC4WZSA/exec">-->
        <div class="form-row">
           <div class="input-data">
              <input name="Name" type="text" required>
@@ -151,12 +151,23 @@
           <br />
           
           <div class="form-row submit-btn">
-                <button>Submit_test &#10132;</button>
+                <button>Submit_test</button>
              </div>
           </div>
         
-    </form>
+   <!-- </form>-->
     </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwZbk7I2KKvPENpP1dNNU8o6AcaLxayD1OsNmMtJYJhrAs-JM82v4S8M_LdCzqXC4WZSA/exec'
+        const form = document.forms['product']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(() => {  location.replace("./pakaya.html"); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
     
 
 </body>
