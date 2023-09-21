@@ -176,3 +176,24 @@ img.ribbon1 {
   right: 16px;
   font-size: 18px;
 }
+
+
+
+
+/* Define the futuristic button styles */
+  .futuristic-button {
+    background-color: cyan; /* Set the background color to cyan */
+    color: purple; /* Set the text color to purple */
+    border: none; /* Remove the button border */
+    padding: 10px 20px; /* Add some padding for better appearance */
+    font-size: 18px; /* Adjust the font size */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 5px; /* Add a slight border radius for rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effects */
+  }
+
+  /* Define hover styles for the button */
+  .futuristic-button:hover {
+    background-color: purple; /* Change background color to purple on hover */
+    color: cyan; /* Change text color to cyan on hover */
+  }
